@@ -1,0 +1,13 @@
+
+<div class="image http://tarsiustech.com/img/image-17-xl.jpg">
+</div>
+
+<script type="text/javascript">
+var images = document.getElementsByClassName("image");
+for(key in images){
+    var img = images[key];
+    var className = img.className;
+    var imgUrl = className.split(' ')[1];
+    img.innerHTML = "<img src='" + imgUrl +"' alt='Image'/>";
+}
+</script>

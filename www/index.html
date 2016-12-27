@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#2196f3">
+    <title>Bitung Smart City</title>
+    <link rel="stylesheet" href="css/framework7.material.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.css">
+
+    <link rel="stylesheet" href="css/kitchen-sink.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="icon" href="img/bsc.png">
+	<script type="text/javascript" src="js/jquery.js"></script>
+   <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #koordinator {
+        height: 100%;
+      }
+        #peta {
+ 
+  height: 400px;
+
+}
+    </style>
+
+	
+	
+  <body class="theme-pink">
+
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+  
+    <div class="panel panel-right panel-reveal">
+      <div class="view view-right">
+       
+      </div>
+	  
+    </div>
+	
+    <div class="views">
+
+      <div class="view view-main">
+        <div class="pages navbar-fixed">
+          <div data-page="index" class="page">
+            <div class="navbar">
+              <div class="navbar-inner">
+			            <div class="left"><a href="index.html" class="back link icon-only"><img src="img/36.png"></a></a>
+                  </div>
+                <div class="left">Bitung Smart City</div>
+
+                
+              </div>
+
+            </div>
+			
+			
+			<div class="toolbar tabbar">
+         <div class="toolbar-inner">
+         <a href="#tab1" class="active tab-link"><i class="fa fa-home fa-2x "></i></a>
+         <a href="#tab2" class="tab-link"><i class="fa fa-map-marker fa-2x " ></i></a>
+         <a href="#tab3" class="tab-link"><i class="fa fa-globe fa-2x "></i></a>
+
+         </div>
+      
+  </div>
+
+
+			
+			  <div class="toolbar-bottom">
+ 
+
+     <div class="speed-dial">
+         <a href="#" class="floating-button"><i class="icon icon-plus"></i><i class="icon icon-close"></i></a>
+    <div class="speed-dial-buttons">
+    <a href="about.html"><i class="fa fa-child"></i></a>
+      <a href="privasi.html"><i class="fa fa-umbrella"></i></a>
+          <a href="#" id="home"><i class="fa fa-info-circle"></i></a>
+    </div>
+
+  </div>
+  </div>
+           
+
+		   
+
+  
+  
+
+  <div class="page-content">
+
+
+
+  <div class="content-block">
+
+
+
+<div class="tabs-animated-wrap">
+    <div class="tabs">
+      <div id="tab1" class="page-content tab active">
+        
+         
+          <p id="info"></p>
+    
+        
+      </div>
+      
+      <div id="tab2" class="page-content tab">
+        
+         
+
+    <div class="list-block accordion-list">
+ 
+ 
+    
+
+
+           
+
+
+            <ul><li class='accordion-item '>
+            <a href='#' class='item-link item-content '> 
+            <i class="fa fa-moon-o margin-left:20px; color-red"></i>  
+            <div class='item-inner'>
+            <div class='item-title' style='margin-left:20px;'>Rumah Ibadah</div>
+            </div>
+            </a> 
+            <div class='accordion-item-content'>
+              
+              <ul><li><a href='daftar.html?id=1' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>Masjid</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+                 <ul><li><a href='daftar.html?id=2' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>Gereja</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+
+                 <ul><li><a href='daftar.html?id=3' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>kuil</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+
+                 <ul><li><a href='daftar.html?id=4' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>Candi</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+            </div>
+            </li>
+            </ul>
+
+            <ul><li class='accordion-item '>
+            <a href='#' class='item-link item-content'> 
+            <i class="fa fa-mortar-board margin-left:20px; color-red "></i>  
+            <div class='item-inner'>
+            <div class='item-title' style='margin-left:20px;'>Pendidikan</div>
+            </div>
+            </a> 
+            <div class='accordion-item-content'>
+            
+              <ul><li><a href='daftar.html?idl=5' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>TK/Paud</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+               <ul><li><a href='daftar.html?id=6' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>SD</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+
+                 <ul><li><a href='daftar.html?id=7' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>SMP</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+
+                 <ul><li><a href='daftar.html?id=8' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>SMA/SMK</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+
+                  <ul><li><a href='daftar.html?id=9' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>KAMPUS</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+            </div>
+            </li>
+            </ul>
+            <ul><li class='accordion-item '>
+            <a href='#' class='item-link item-content'> 
+            <i class="fa fa-university margin-left:20px; color-red"></i>  
+            <div class='item-inner'>
+            <div class='item-title' style='margin-left:20px;'>Pemerintahan</div>
+            </div>
+            </a> 
+            <div class='accordion-item-content'>
+              
+              <ul><li><a href='daftar.html?id=10' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>Dinas Kota Bitung</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+
+                
+
+            </div>
+            </li>
+            </ul>
+
+
+
+            <ul><li class='accordion-item '>
+            <a href='#' class='item-link item-content'> 
+            <i class="fa fa-users margin-left:20px; color-red"></i>  
+            <div class='item-inner'>
+            <div class='item-title' style='margin-left:20px;'>Pelayanan</div>
+            </div>
+            </a> 
+            <div class='accordion-item-content'>
+              
+              <ul><li><a href='daftar.html?id=11' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>Instansi Negeri</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+
+                 <ul><li><a href='daftar.html?id=12' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>Instansi Swasta</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+            </div>
+            </li>
+            </ul>
+
+
+         
+
+
+            <ul><li class='accordion-item '>
+            <a href='#' class='item-link item-content'> 
+            <i class="fa fa-industry margin-left:20px; color-red"></i>  
+            <div class='item-inner'>
+            <div class='item-title' style='margin-left:20px;'>Perusahan</div>
+            </div>
+            </a> 
+            <div class='accordion-item-content'>
+              
+              <ul><li><a href='daftar.html?id=13' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>BUMN/BUMD</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+
+                 <ul><li><a href='daftar.html?id=14' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>PT/CV</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+            </div>
+            </li>
+            </ul>
+
+            <ul><li class='accordion-item '>
+            <a href='#' class='item-link item-content'> 
+            <i class="fa fa-cutlery margin-left:20px; color-red"></i>  
+            <div class='item-inner'>
+            <div class='item-title' style='margin-left:20px;'>Tempat Makan</div>
+            </div>
+            </a> 
+            <div class='accordion-item-content'>
+              
+              <ul><li><a href='daftar.html?id=15' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>Cafe</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+
+                 <ul><li><a href='daftar.html?id=16' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>Restoran</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+            </div>
+            </li>
+            </ul>
+
+          
+            <ul><li class='accordion-item '>
+            <a href='#' class='item-link item-content'> 
+            <i class="fa fa-shopping-cart margin-left:20px; color-red"></i>  
+            <div class='item-inner'>
+            <div class='item-title' style='margin-left:20px;'>Pusat Perbelanjaan</div>
+            </div>
+            </a> 
+            <div class='accordion-item-content'>
+              
+              <ul><li><a href='daftar.html?id=17' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>Swalayan </div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+
+                 <ul><li><a href='daftar.html?id=18' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>Pasar</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+            
+            </div>
+            </li>
+            </ul>
+ <ul><li class='accordion-item '>
+            <a href='#' class='item-link item-content'> 
+            <i class="fa fa-heart-o margin-left:20px; color-red"></i>  
+            <div class='item-inner'>
+            <div class='item-title' style='margin-left:20px;'>Hiburan & Refreshing</div>
+            </div>
+            </a> 
+            <div class='accordion-item-content'>
+              
+              <ul><li><a href='daftar.html?id=19' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>Wisata</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+
+                <ul><li><a href='daftar.html?id=20' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>Kuliner</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+            </div>
+            </li>
+            </ul>
+   <ul><li class='accordion-item '>
+            <a href='#' class='item-link item-content'> 
+            <i class="fa fa-universal-access margin-left:20px; color-red"></i>  
+            <div class='item-inner'>
+            <div class='item-title' style='margin-left:20px;'>Jasa layanan</div>
+            </div>
+            </a> 
+            <div class='accordion-item-content'>
+              
+              <ul><li><a href='daftar.html?id=21' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>Service</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+
+                 <ul><li><a href='daftar.html?id=22' class='item-link'>
+              <div class='item-content'>
+              <div class='item-media'>
+              <i class='icon icon-f7'></i>
+              </div><div class='item-inner'>
+               <div class='item-title'>Pangkalan & Rental</div>
+               </div>
+               </div>
+               </a>
+               </li>
+               </ul>
+
+            </div>
+            </li>
+            </ul>
+
+            </div>
+          </p>
+        
+      </div>
+
+
+      <div id="tab3" class="page-content tab">
+       <div class="list-block inputs-list">
+          <div class="item-content">
+            <div class="item-media"><i class="fa fa-map-marker"></i></div>
+            <div class="item-inner not-empty-state"> 
+              <div class="item-title label">Maps Lokasi</div>
+              <div class="item-input item-input-field not-empty-state">
+                <select class="not-empty-state" id="tampil_sub">
+                <option>Pilih</option>
+                </select>
+              </div>
+            </div>
+
+
+
+
+           
+          </div>
+           <div id="peta"></div>
+        </div>
+       
+
+   
+     
+    
+          
+       
+      </div>
+
+
+    </div>
+  </div>
+
+ 
+<div id="info">
+
+
+
+ </div>
+
+<p>
+</p>
+
+</div>
+  
+  
+   
+	
+	
+	
+  
+          </div>
+
+		  <div class="page-content">
+		  </div>
+        </div>
+      </div>
+    </div>
+   </div>
+   
+ 
+
+    
+
+ 
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+
+	  <script type="text/javascript" src="js/jquery.js"></script>
+	 
+		  <script type="text/javascript" src="cordova.js"></script>
+	   	  <script type="text/javascript" src="js/kitchen-sink.js"></script>
+ <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwTDymmgkgxcVXWrw57685ay4b2TY7BeQ&callback=initMap"
+  type="text/javascript"></script>
+
+		   <script type="text/javascript" src="js/gmaps.js"></script>
+
+
+ 
+  </body>
+</html>

@@ -1,0 +1,26 @@
+ hi developer 
+
+gimana codenya , udah dapat logikanya ?  masi errornya codenya ?? coba debug lagi , masi error juga coba rehat sejenak , nikmatin dunia luar dulu sapa tau dapat inspirasi baru , jangan terus - terusan ngoding , kasihan pacarnya juga butuh perhatian , nanti ngambek loh :D
+
+ok stop kita lanjut sob
+
+bagi anda web developer pasti dan tentu tidak akan lepas dari namanya hak akses atau fitur login, dan setiap developer punya cara sendiri - sendiri untuk membuat fitur login ini , begitu juga dengan penyimpanan password bagi kebanyakan developer jika tidak mengunakan md5 pasti sh1 jadi alternatif untuk menyimpan password user ke dalam database
+
+kali ini saya tidak akan menjelaskan alasan kenapa kebanyakan developer menyimpan password user dengan metode md5 atau sh1, yang jadi penekanan di sini adalah seberapa aman password yang di hash dengan metode md5 atau sh1 
+
+tapi ada sedikit pertanyaan yang munkin menjadi beban pikiran anda , APAKAH SEBUAH PASSWORD HARUS DI ENKRIPSI DULU SEBELUM DI SIMPAN KE DATABASE ??? 
+
+jawabanya ya wajib di enkripsi bagi segilintir developer , tapi jika jawaban ini seperti halnya demokrasi suara terbanyak menjadi tolak ukur kebenaran ini berbeda dengan musyawarah di mana pendapat yang bisa bermanfaat bagi banyak orang dan paling masuk di logika yang merupakan tolak sebuah kebenaran walaupun hanya di suarakan oleh 1 or 2 orang saja, yang terbanyak bukan merupakan tolak ukur sebuah kebenaran , jadi di haram hukumnya menyimpan password dalam bentuk enkripsi ke dalam database, WTF ?
+
+om sebuah password yang di enkripsi itu berpuluang sangat besar untuk bisa di deksripsi, password yang di enskripsi tinggal menunggu waktu ketika seseorang dengan penuh keyakinan, berjuang untuk mendapatkan key dan menelanjangkan password yang di enskripsi dengan cara apapun, jika seorang cracker telah menemukan sebuah key apapun itu akan bisa di deskript karna key merupakan kunci utama untuk memecahkan sebuah enskripsi
+
+ini berbeda jika mengunakan hashing dengan metode md5 atau sh1 untuk menyimpan database , karna md5 atau sh1  tidak di bisa deskripsi kerna bersifat one away , tidak ada key seperti halnya enskripsi 
+
+nah yang jadi pertanyaan berikutannya HALALKAH MENGUNAKAN MD5 ATAU SH1 UNTUK MENYIMPAN PASSWORD KEDALAM DATABASE ???
+
+jawabannya HARAM,  loh kan tidak seperti enskripsi yang punya key dan md5 dan sh1 juga tidak bisa di deksripsi 
+
+yups benar md5 ataupun sh1 tidak bisa di deskripsi kerna memang md5 bukan enskripsi malainkan hash, HUKUMNYA JIKA SESUATU YANG BISA DI ENSKRIPSI OTOMATIS BISA DI DEKSRIPSI, walaupun   tidak mempunyai key tetap saja md5 mempunyai kekurang dan sekarang md5 sudah tidak ampuh lagi sebagi palang pintu sebuah password, karna sudah banyak tols crack yang bisa memecahkan md5 ,coba aja di search di google dengan keyword " md5 craker" atau "md5 crack password"
+
+
+
