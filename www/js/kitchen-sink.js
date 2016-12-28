@@ -89,90 +89,15 @@ function createContentPage() {
 $$(document).on('click', '.ks-generate-page', createContentPage);
 
 
-  
-myApp.onPageInit('katagori', function (page) {
-	function getUrlVars() {
-    var vars = [], hash;
-    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-    for (var i = 0; i < hashes.length; i++) {
-        hash = hashes[i].split('=');
-        vars.push(hash[0]);
-        vars[hash[0]] = hash[1];
-    }
-    return vars;
-}
-
- 
-	$(document).ready(function()
-	{
-		//var url="http://phonegappro.esy.es/test/json.php";
-		var url="http://tarsiustech.com/bis_web/json_kat.php";
-		$.getJSON(url,function(result){
-			console.log(result);
-	        $.each(result, function(i, field){
-	        	var id_kat=field.id_kat;
-	        	var daftar=field.daftar;
-				var id_sub = field.id_sub;
-				var jenis = field.jenis
-				var icon = field.icon;
-	        	
-	           // $("#listview").append("<a class='item' href='form.html?id="+id+"&title="+title+"&duration="+duration+"&price="+price+"'><span class='item-note'>$"+price+"</span><h2>"+ title + " </h2><p>"+ duration +"</p></a>");
-	         //$("#list").append("<ul><li class='accordion-item'><a href='#' class='item-link item-content'><div class='item-inner'> <div class='item-title'>"+ nama +"</div></div></a> </li></ul>");
-		     
-			// $("#list").append("<li class='accordion-item'><a href='#' class='item-link item-content'><div class='item-inner'> <div class='item-title'>"+daftar+"</div></div></a><div class='accordion-item-content' id=jenis"+id_kat+"></div></li>");
-			//$("#list").append("<div class='list-block'><ul><li><div class='item-content'><div class='item-media'><i class='icon icon-f7'></i></div><div class='item-inner'> <div class='item-title'>Item 1</div></div></div></li></ul></div>")
-	$("#list").append("<ul><li class='accordion-item '><a href='#' class='item-link item-content '>" +icon+"  <div class='item-inner'><div class='item-title' style='margin-left:20px;'>" +daftar+"</div></div></a> <div class='accordion-item-content' id=jenis"+id_kat+"></div></li></ul>");
-		   });
-		   
-		   
-    	});
-		$$('#miabout').on('click', function () {
-    myApp.alert("<b align='center'> Harun Umar</b> <p>FB : fb.com/gapteek</p>");
-});
-	});
-	
-	
-	$(document).ready(function()
-	{
-		//var url="http://phonegappro.esy.es/test/json.php";
-		var url="http://tarsiustech.com/bis_web/json_sub.php";
-		$.getJSON(url,function(result){
-			console.log(result);
-	        $.each(result, function(i, field){
-	        	
-				var id_kat= field.id_kat;
-				var id_sub = field.id_sub
-				var jenis = field.jenis
-	        	
-	           // $("#listview").append("<a class='item' href='form.html?id="+id+"&title="+title+"&duration="+duration+"&price="+price+"'><span class='item-note'>$"+price+"</span><h2>"+ title + " </h2><p>"+ duration +"</p></a>");
-		     
-			 //$("#list").append("<li class='accordion-item'><a href='#' class='item-link item-content'><div class='item-inner'> <div class='item-title'>"+daftar+"</div></div></a><div class='accordion-item-content' id=jenis"+id_kat+"></div></li>");
-			//$("#jenis"+id_kat+"").append(jenis);
-		  	    //   $("#jenis"+id_kat+"").append("<a href='daftar.html?id="+id_sub+"' class='item-link item-content'>"+jenis+"</a>");
-		$("#jenis"+id_kat+"").append(" <ul><li><a href='daftar.html?id="+id_sub+"' class='item-link'><div class='item-content'><div class='item-media'><i class='icon icon-f7'></i></div><div class='item-inner'> <div class='item-title'>"+jenis+"</div></div></div></a></li></ul>")
-		  
-
-
-   
-		  
-		  });
-		   
-		   
-    	});
-	});
-	
-
-   
-});
 
 
 
 myApp.onPageInit('daftar', function (page) {
 
 
+  
 $(document).ready(function() {
-	
-	
+
 var idx = page.query.id;
 
 
@@ -189,9 +114,10 @@ var idx = page.query.id;
                 var nama=field.nama;
 				
 	
-            
+
+
          $("#dan").append("<ul><li class='accordion-item'><a href='lokasi.html?idl="+id+"' class='item-link item-content'><div class='item-inner'> <div class='item-title'>"+nama+"</div></div></a><div class='accordion-item-content'></div></li></ul>");
-			
+			$(".preloader").fadeOut("slow");
 				
                 });
               
@@ -269,7 +195,7 @@ var data_table = "";
         });
 		
 	$(".buttons-row").append(" <a a href='maps.html?id_map="+idl+"'  class='button button-raised color-blue ' id='maps'><i class='fa fa-map-marker' style='font-size:20px; margin-top:7px;'></i></a>")
-		
+	$(".preloader").fadeOut("slow");;	
 });
 
 		$$('#mdabout').on('click', function () {
@@ -387,9 +313,12 @@ $.ajax({
 	
             
             myApp.pickerModal('.picker-modal-demo');
-		$("#informasi").append("Alamat : "+ket+"");
+
 		
-		
+                    
+
+          $("#informasi").append("Alamat : "+ket+"");
+$(".preloader").fadeOut("slow");
                 });
               
             }
@@ -452,9 +381,10 @@ myApp.onPageInit('maps', function (page) {
                 });
               
             }
+
         });
 		
-		
+		$(".preloader").fadeOut("slow");
 		
 		
    
@@ -478,23 +408,25 @@ myApp.onPageInit('maps', function (page) {
 
 
 $$(document).on('pageInit', '.page[data-page="index"]', function (e) {
-  // Do something here when page with data-page="about" attribute loaded and initialized
-    $(document).ready(function(){
-   
     var url="http://tarsiustech.com/serv_bitung/public/info";
-        $.getJSON(url,function(result){
-            console.log(result);
-            $.each(result, function(i, field){
-                var id_info=field.id_info;
-                var info=field.info;
+    $.getJSON(url,function(result){
+      console.log(result);
+          $.each(result, function(i, field){
+            var id_info=field.id_info;
+            var info=field.info;
+        
+             // $("#listview").append("<a class='item' href='form.html?id="+id+"&title="+title+"&duration="+duration+"&price="+price+"'><span class='item-note'>$"+price+"</span><h2>"+ title + " </h2><p>"+ duration +"</p></a>");
           
-               // $("#listview").append("<a class='item' href='form.html?id="+id+"&title="+title+"&duration="+duration+"&price="+price+"'><span class='item-note'>$"+price+"</span><h2>"+ title + " </h2><p>"+ duration +"</p></a>");
+     $(window).load(function() {
+
+    $("#info").append("<p>"+info+"</p>");
+    $("#preloaderr").fadeOut("slow");
+});
+
+  
             
-    
-            $("#info").append("<p>"+info+"</p>");
-            
-           });
-        });
+       });
+      });
 
     var url="http://tarsiustech.com/serv_bitung/public/tampil-sub";
         $.getJSON(url,function(result){
@@ -504,7 +436,14 @@ $$(document).on('pageInit', '.page[data-page="index"]', function (e) {
                 var nama=field.nama;
            
     
-            $("#tampil_sub").append("<option value="+id+">"+nama+"</option>");
+         
+
+            
+
+       $("#tampil_sub").append("<option value="+id+">"+nama+"</option>");
+
+
+
            });
         });
 
@@ -561,7 +500,6 @@ var map;
            
 
 
-
      /* menambahkan event clik untuk menampikan
        infowindows dengan isi sesuai denga
       marker yang di klik */
@@ -574,8 +512,12 @@ var map;
           url : "http://tarsiustech.com/serv_bitung/public/titik-gambar/"+id+"",
          // data : "id=" +id ,
           success : function(data) {
+
+
+
               infowindow.setContent(data);
               infowindow.open(map, marker);
+                $(".preloader").fadeOut("slow");
               
           }
         });   
@@ -589,16 +531,14 @@ var map;
 
 
 });
-   
-   
-    });
-    $$('#home').on('click', function () {
-    myApp.alert("<i class='fa fa-envelope'></i> arunumar21@gmail.com");
-});
+
 }) 
 
  $(document).ready(function(){
    
+
+
+
  	var url="http://tarsiustech.com/serv_bitung/public/info";
 		$.getJSON(url,function(result){
 			console.log(result);
@@ -608,8 +548,13 @@ var map;
 	      
 	           // $("#listview").append("<a class='item' href='form.html?id="+id+"&title="+title+"&duration="+duration+"&price="+price+"'><span class='item-note'>$"+price+"</span><h2>"+ title + " </h2><p>"+ duration +"</p></a>");
 	        
+	   $(window).load(function() {
+
+    $("#info").append("<p>"+info+"</p>");
+$("#preloaderr").fadeOut("slow");
+});
+
 	
-			$("#info").append("<p>"+info+"</p>");
             
 		   });
     	});
@@ -622,7 +567,14 @@ var map;
                 var nama=field.nama;
            
     
-            $("#tampil_sub").append("<option value="+id+">"+nama+"</option>");
+         
+
+            
+
+       $("#tampil_sub").append("<option value="+id+">"+nama+"</option>");
+$("#loadlokasi").fadeOut("slow");
+
+
            });
         });
 
@@ -692,8 +644,12 @@ var map;
           url : "http://tarsiustech.com/serv_bitung/public/titik-gambar/"+id+"",
          // data : "id=" +id ,
           success : function(data) {
+
+
+
               infowindow.setContent(data);
               infowindow.open(map, marker);
+                $(".preloader").fadeOut("slow");
               
           }
         });   

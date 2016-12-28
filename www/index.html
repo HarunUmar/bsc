@@ -94,7 +94,7 @@
   
   
 
-  <div class="page-content">
+  <div class="page-content ">
 
 
 
@@ -105,7 +105,10 @@
 <div class="tabs-animated-wrap">
     <div class="tabs">
       <div id="tab1" class="page-content tab active">
-        
+      
+      <div class="infinite-scroll-preloader" align="center">
+    <div class="preloader ks-preloader-big preloader-red" id="preloaderr" align="center"></div>
+  </div>
          
           <p id="info"></p>
     
@@ -511,8 +514,11 @@
 
 
       <div id="tab3" class="page-content tab">
+                            <div class="infinite-scroll-preloader" align="center">
+    <div class="preloader ks-preloader-big preloader-red" id="loadlokasi" align="center"></div>
        <div class="list-block inputs-list">
           <div class="item-content">
+
             <div class="item-media"><i class="fa fa-map-marker"></i></div>
             <div class="item-inner not-empty-state"> 
               <div class="item-title label">Maps Lokasi</div>
@@ -528,6 +534,9 @@
 
            
           </div>
+
+
+
            <div id="peta"></div>
         </div>
        
@@ -578,7 +587,7 @@
     <script type="text/javascript" src="js/framework7.min.js"></script>
 
 	  <script type="text/javascript" src="js/jquery.js"></script>
-	 
+	
 		  <script type="text/javascript" src="cordova.js"></script>
 	   	  <script type="text/javascript" src="js/kitchen-sink.js"></script>
  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwTDymmgkgxcVXWrw57685ay4b2TY7BeQ&callback=initMap"
