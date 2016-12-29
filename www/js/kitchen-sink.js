@@ -3,6 +3,8 @@ var myApp = new Framework7({
     modalTitle: 'Powered By TarsiusLabs',
     // Enable Material theme
     material: true,
+    cache : true,
+    cacheDuration : 1000*60*10,
 });
 
 // Expose Internal DOM library
@@ -415,13 +417,12 @@ $$(document).on('pageInit', '.page[data-page="index"]', function (e) {
             var id_info=field.id_info;
             var info=field.info;
         
-             // $("#listview").append("<a class='item' href='form.html?id="+id+"&title="+title+"&duration="+duration+"&price="+price+"'><span class='item-note'>$"+price+"</span><h2>"+ title + " </h2><p>"+ duration +"</p></a>");
-          
-     $(window).load(function() {
+   
+    
 
     $("#info").append("<p>"+info+"</p>");
     $("#preloaderr").fadeOut("slow");
-});
+
 
   
             
@@ -441,7 +442,7 @@ $$(document).on('pageInit', '.page[data-page="index"]', function (e) {
             
 
        $("#tampil_sub").append("<option value="+id+">"+nama+"</option>");
-
+   $("#loadlokasi").fadeOut("slow");
 
 
            });
@@ -680,6 +681,7 @@ $$('#home').on('click', function () {
 	
 		
 		
+
 
 
 
